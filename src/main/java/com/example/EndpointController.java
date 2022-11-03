@@ -9,6 +9,6 @@ public class EndpointController {
 
     @GetMapping("/HelloWorld")
     public String hello() {
-        return "Give me your clothes!";
+        return "Give me your clothes!2222";
     }
 }
