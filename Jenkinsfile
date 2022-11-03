@@ -10,12 +10,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t egor/jpipeline:latest .'
+        sh 'docker build  --name jenkinsCont  -t egor/jpipeline:latest .'
       }
     }
     stage('Deploy') {
       steps {
-        sh 'docker stop egor/jpipeline:latest || true && docker rm egor/jpipeline:latest || true'
+        sh 'docker stop jenkinsCont || true && docker rm jenkinsCont || true'
         sh 'docker run -d -p 8081:8081 egor/jpipeline:latest'
       }
     }
