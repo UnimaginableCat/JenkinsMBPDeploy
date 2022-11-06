@@ -9,6 +9,6 @@ public class EndpointController {
 
     @GetMapping("/HelloWorld")
     public String hello() {
-        return "new commit";
+        return "test test";
     }
 }
